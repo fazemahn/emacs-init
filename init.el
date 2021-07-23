@@ -1,6 +1,6 @@
 ;; List the packages you want
 (setq package-list
-      '(wrap-region modus-themes yasnippet))
+      '(wrap-region modus-themes yasnippet ivy swiper))
 ;; Package Manager Setup
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -14,6 +14,7 @@
   (unless (package-installed-p package)
     (package-install package)))
 ;; Font and UI tweaks
+(setq inhibit-startup-screen t)
 (set-face-attribute 'default nil :height 130)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -36,7 +37,9 @@
 ;;Yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
-
+;;Ivy and Swiper
+(ivy-mode 1)
+(global-set-key (kbd "C-s") 'swiper)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
