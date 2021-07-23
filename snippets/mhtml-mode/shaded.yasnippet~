@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: shaded-insert-box
+# key: shad
+# --
+<div class="textbox shaded">${0:Content}</div>

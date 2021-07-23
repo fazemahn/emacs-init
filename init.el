@@ -1,6 +1,6 @@
 ;; List the packages you want
 (setq package-list
-      '(wrap-region modus-themes))
+      '(wrap-region modus-themes yasnippet))
 ;; Package Manager Setup
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -33,9 +33,19 @@
 (wrap-region-add-wrapper "$latex " "$" "$")
 (wrap-region-add-wrapper "\\[" "\\]" "#")
 (wrap-region-add-wrapper "\\text{" "}" "t")
+;;Yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (custom-set-variables
- ;; custom-set-variables wa\text{s added} by Custom.
+ ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages '(wrap-region)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
